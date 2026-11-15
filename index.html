@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sokratis S. Chouliaras</title>
+<meta name="description" content="Sokratis S. Chouliaras, Electrical and Computer Engineering student at NTUA. Analog and RF circuits, electromagnetics, EMC.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sokratis S. Chouliaras">
+<meta property="og:description" content="ECE student at NTUA. Analog and RF circuits, electromagnetics, EMC.">
+<meta property="og:url" content="https://sschouliaras.github.io/">
+<meta property="og:image" content="https://sschouliaras.github.io/images/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  body { max-width: 50em; padding: 0 8px; }
+  img  { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+
+<hr>
+<h1>Sokratis S. Chouliaras</h1>
+
+<p><img src="images/photo.jpg" alt="Sokratis S. Chouliaras" width="130"></p>
+
+<p><b>Undergraduate Student, Electrical and Computer Engineering</b></p>
+<p><b><a href="https://www.ece.ntua.gr/en">School of Electrical and Computer Engineering</a></b></p>
+<p><b><a href="https://www.ntua.gr/en/">National Technical University of Athens (NTUA)</a></b></p>
+
+<p>
+I am a third-year student in the five-year ECE diploma programme at NTUA.
+I work (and hope to keep working) on analog and RF circuits, electromagnetics and electromagnetic compatibility.
+</p>
+
+<p>
+[<a href="#research">Research</a>]
+[<a href="#experience">Experience</a>]
+[<a href="#projects">Projects</a>]
+[<a href="#education">Education</a>]
+[<a href="#skills">Skills</a>]
+[<a href="sokratis_chouliaras_cv.pdf">CV (PDF)</a>]
+</p>
+
+<hr>
+<h2>Contact Information</h2>
+
+<p><b>E-mail:</b> <a href="mailto:sschouliaras@gmail.com">sschouliaras@gmail.com</a></p>
+<p><b>Location:</b> Athens, Greece</p>
+
+<hr>
+<h2>Interests</h2>
+
+<ul>
+  <li>Analog and RF integrated circuit design</li>
+  <li>Passive networks and filter theory
+    <ul><li>RC polyphase filters</li></ul>
+  </li>
+  <li>Electromagnetics</li>
+  <li>Electromagnetic compatibility (EMC) and near-field measurements</li>
+  <li>Embedded systems and PCB design</li>
+</ul>
+
+<hr>
+<h2 id="research">Research</h2>
+
+<h3>Passive RC Polyphase Filters</h3>
+<p><i>Undergraduate research, NTUA, supervised by Prof. Sotiriadis. 2026 to present.</i></p>
+
+<p>
+Passive RC polyphase filters generate and select quadrature signals in radio receivers,
+where their image rejection ratio (IRR) sets how well the unwanted image band is suppressed.
+I study an alternating RC polyphase topology and compare it against the conventional one
+when the source and load resistances are finite, which is the case in any real circuit.
+</p>
+
+<ul>
+  <li>The alternating design improves the image rejection ratio by 3 dB over the conventional design.</li>
+  <li>The analysis is built on transmission (ABCD) matrices, so the source, each stage and the load
+      are blocks that can be cascaded. A DFT modal decomposition splits the four-phase network
+      into four independent two-port chains, which gives closed-form transfer functions.</li>
+  <li>I wrote a symbolic nodal-analysis tool in MATLAB for networks with any number of phases and stages,
+      and checked its results against LTspice for one, two and three stages.</li>
+</ul>
+
+<p><b>Manuscript in preparation:</b></p>
+<ol>
+  <li>S. S. Chouliaras, <i>"Analysis and Optimization of Alternating RC Polyphase Networks
+      With Finite Source and Load Resistance,"</i> in preparation.</li>
+</ol>
+
+<hr>
+<h2 id="experience">Experience</h2>
+
+<h3>Prom Racing, NTUA Formula Student Team</h3>
+<p><i>Low Voltage Electronics Engineer (PCB design and systems). November 2025 to September 2026.</i></p>
+
+<p>
+Prom Racing designs and builds a single-seat electric race car every year and takes it to the
+Formula Student competitions. I was a member of the Low Voltage subteam, which is responsible
+for the car's control electronics and wiring.
+</p>
+
+<ul>
+  <li><b>Development board.</b> I designed the team's STM32 development board in Altium Designer,
+      with CAN bus and I<sup>2</sup>C interfaces. It was fabricated and the team now uses it to train
+      new members on STM32 firmware.</li>
+  <li><b>Battery state of charge.</b> I implemented a Kalman filter in C on an STM32 microcontroller
+      that estimates the battery's state of charge. It ran on the car during competitions.</li>
+  <li><b>TSAL.</b> I maintained the PCB of the Tractive System Active Light, the safety light that shows
+      when the high-voltage system is live.</li>
+  <li><b>Registration quizzes.</b> I was on the team's squad for the timed engineering quizzes that decide
+      entry to the competitions (FS Germany, FS Austria, FS Spain).</li>
+</ul>
+
+<p><img src="images/devboard.jpg" alt="STM32 development board for Prom Racing" width="420"><br>
+<i>The STM32 development board.</i></p>
+
+<p><img src="images/tsal_thermal.jpg" alt="Thermal camera image of the TSAL board" width="320"><br>
+<i>Checking the TSAL board with a thermal camera.</i></p>
+
+<hr>
+<h2 id="projects">Projects</h2>
+
+<p>
+<b>Note:</b> the descriptions below are short on purpose. If you would like more on any project
+(photos, schematics, measurements, code), feel free to
+<a href="mailto:sschouliaras@gmail.com">e-mail me</a>.
+</p>
+
+<h3>Shielded PCB H-Field Near-Field Probe</h3>
+<p><i>Altium Designer, NanoVNA. 2026.</i></p>
+
+<p>
+A near-field probe picks up the magnetic field a few millimetres above a circuit, which makes it
+possible to find the part of a board that radiates. A good probe has to respond to the magnetic
+field and reject the electric field. I built one for EMC debugging by reproducing a design published
+in <i>IEEE Transactions on Electromagnetic Compatibility</i> in 2026 (Filipa&scaron;i&cacute; and Dadi&cacute;),
+with some layout changes of my own.
+</p>
+
+<ul>
+  <li>Four-layer PCB with a concentric spiral coil of 18 turns per layer, enclosed by a shield
+      closed with stitching vias.</li>
+  <li>The spiral geometry is generated by a script inside Altium Designer, not drawn by hand.</li>
+  <li>The bare board measures 232 &micro;H with a self-resonance at 615.5 kHz, against
+      252.7 &micro;H and 630 kHz reported in the paper.</li>
+</ul>
+
+<p><img src="images/probe.jpg" alt="Shielded PCB H-field probe" width="320"><br>
+<i>The fabricated probe. The coil is hidden inside the shield.</i></p>
+
+<p><img src="images/probe_vna.jpg" alt="NanoVNA impedance sweep of the probe" width="420"><br>
+<i>Impedance of the bare board on the NanoVNA, with the self-resonance at 615.5 kHz.</i></p>
+
+<h3>Epsilon-Near-Zero Metal-Dielectric Multilayers</h3>
+<p><i>MATLAB. Course project, Dynamic Electromagnetic Fields, NTUA. 2026.</i></p>
+
+<p>
+A material whose permittivity is close to zero behaves in unusual ways, but no natural solid has
+that property across the whole visible spectrum. This project asks how close a periodic stack of
+thin metal and dielectric layers can get, starting from measured optical constants of five metals
+(Au, Ag, Ti, Al, Be) and five dielectrics (a-Si, c-Si, GaAs, GaP, Ge).
+</p>
+
+<ul>
+  <li>Effective-medium theory gives the permittivity of the stack for each polarization. An exhaustive
+      search over the metal fraction finds the best design for all 25 metal and dielectric pairs,
+      with and without losses.</li>
+  <li>For the field perpendicular to the layers, I show analytically that mixing never helps:
+      the best structure is always one of the two pure materials.</li>
+  <li>The measured data are extended to all frequencies with causal Drude and Lorentz models,
+      and the impulse response and the response to a modulated Gaussian pulse are computed in the time domain.</li>
+</ul>
+
+<h3>Digital Near-Infrared Night Vision Goggles</h3>
+<p><i>Raspberry Pi 5, IR camera module, custom PCB. 2026.</i></p>
+
+<p>
+Digital night vision goggles built around an off-the-shelf infrared camera module.
+A Raspberry Pi 5 processes the image, and a custom PCB that I designed drives the infrared LEDs
+that light the scene.
+</p>
+
+<hr>
+<h2 id="education">Education</h2>
+
+<ul>
+  <li>
+    <p><b>National Technical University of Athens (NTUA)</b></p>
+    <p>Diploma (five-year integrated M.Eng.) in Electrical and Computer Engineering, September 2024 to present (expected 2029)</p>
+    <p>GPA: 9.55/10</p>
+  </li>
+  <li>
+    <p><b>Leonteios School of Nea Smyrni (Lyc&eacute;e L&eacute;onin)</b></p>
+    <p>High School Diploma, June 2024</p>
+    <p>19,400/20,000 on the national university entrance exams. School award for the top grade in Physics, Chemistry and Mathematics.</p>
+  </li>
+</ul>
+
+<p><b>Schools and conferences attended:</b></p>
+<ul>
+  <li>32nd Summer School-Conference "Dynamic Systems and Complexity", NTUA, July 2026</li>
+</ul>
+
+<hr>
+<h2 id="skills">Skills</h2>
+
+<ul>
+  <li><b>Programming:</b> C/C++, MATLAB, LaTeX</li>
+  <li><b>Design and simulation:</b> Altium Designer, LTspice, STM32CubeIDE, Fusion 360</li>
+  <li><b>Hardware:</b> STM32, CAN bus, I<sup>2</sup>C, PCB layout, VNA measurements, 3D printing</li>
+  <li><b>Languages:</b> Greek (native), English (C2, Michigan ECPE with Honors)</li>
+</ul>
+
+<hr>
+<p><small>Last updated: November 2026</small></p>
+
+</body>
+</html>
